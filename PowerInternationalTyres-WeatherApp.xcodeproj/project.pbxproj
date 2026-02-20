@@ -6,30 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8192D7832F48957A00878BDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D7822F48957A00878BDF /* AppDelegate.swift */; };
+		8192D7852F48957A00878BDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D7842F48957A00878BDF /* SceneDelegate.swift */; };
+		8192D7872F48957A00878BDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D7862F48957A00878BDF /* ViewController.swift */; };
+		8192D78C2F48957C00878BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8192D78B2F48957C00878BDF /* Assets.xcassets */; };
+		8192D78F2F48957C00878BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8192D78D2F48957C00878BDF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8192D77F2F48957A00878BDF /* PowerInternationalTyres-WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PowerInternationalTyres-WeatherApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8192D7822F48957A00878BDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8192D7842F48957A00878BDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8192D7862F48957A00878BDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8192D78B2F48957C00878BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8192D78E2F48957C00878BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8192D7902F48957C00878BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8192D7912F48957C00878BDF /* Exceptions for "PowerInternationalTyres-WeatherApp" folder in "PowerInternationalTyres-WeatherApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 8192D77E2F48957A00878BDF /* PowerInternationalTyres-WeatherApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8192D7812F48957A00878BDF /* PowerInternationalTyres-WeatherApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8192D7912F48957C00878BDF /* Exceptions for "PowerInternationalTyres-WeatherApp" folder in "PowerInternationalTyres-WeatherApp" target */,
-			);
-			path = "PowerInternationalTyres-WeatherApp";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8192D77C2F48957A00878BDF /* Frameworks */ = {
@@ -45,8 +38,13 @@
 		8192D7762F48957A00878BDF = {
 			isa = PBXGroup;
 			children = (
-				8192D7812F48957A00878BDF /* PowerInternationalTyres-WeatherApp */,
+				8192D7A92F489B4000878BDF /* App */,
+				8192D7AA2F489B4B00878BDF /* Core */,
+				8192D7AB2F489B5200878BDF /* Entities */,
+				8192D7AC2F489B7800878BDF /* Features */,
+				8192D7AE2F489B9800878BDF /* Products */,
 				8192D7802F48957A00878BDF /* Products */,
+				8192D7AD2F489B8F00878BDF /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +54,54 @@
 				8192D77F2F48957A00878BDF /* PowerInternationalTyres-WeatherApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8192D7A92F489B4000878BDF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8192D7822F48957A00878BDF /* AppDelegate.swift */,
+				8192D7842F48957A00878BDF /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8192D7AA2F489B4B00878BDF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8192D7AB2F489B5200878BDF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8192D7AC2F489B7800878BDF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8192D7862F48957A00878BDF /* ViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8192D7AD2F489B8F00878BDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8192D78B2F48957C00878BDF /* Assets.xcassets */,
+				8192D7902F48957C00878BDF /* Info.plist */,
+				8192D78D2F48957C00878BDF /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8192D7AE2F489B9800878BDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +118,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8192D7812F48957A00878BDF /* PowerInternationalTyres-WeatherApp */,
 			);
 			name = "PowerInternationalTyres-WeatherApp";
 			packageProductDependencies = (
@@ -122,6 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8192D78F2F48957C00878BDF /* LaunchScreen.storyboard in Resources */,
+				8192D78C2F48957C00878BDF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +177,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8192D7872F48957A00878BDF /* ViewController.swift in Sources */,
+				8192D7832F48957A00878BDF /* AppDelegate.swift in Sources */,
+				8192D7852F48957A00878BDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8192D78D2F48957C00878BDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8192D78E2F48957C00878BDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8192D7932F48957C00878BDF /* Debug */ = {
@@ -147,12 +206,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6P36UUCJC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PowerInternationalTyres-WeatherApp/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -161,12 +220,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "MikhailEgorov.PowerInternationalTyres-WeatherApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -179,12 +242,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6P36UUCJC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PowerInternationalTyres-WeatherApp/Info.plist";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -193,12 +256,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "MikhailEgorov.PowerInternationalTyres-WeatherApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
