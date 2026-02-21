@@ -40,6 +40,16 @@
 		8192D78F2F48957C00878BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8192D78D2F48957C00878BDF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8171EF062F4A0A36009E3CA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8192D7772F48957A00878BDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8192D77E2F48957A00878BDF;
+			remoteInfo = "PowerInternationalTyres-WeatherApp";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8171EEAF2F49D2F8009E3CA1 /* WeatherAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAssembly.swift; sourceTree = "<group>"; };
 		8171EEB12F49D32A009E3CA1 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +78,7 @@
 		8171EEF82F4A05E9009E3CA1 /* WeatherPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenterProtocol.swift; sourceTree = "<group>"; };
 		8171EEFA2F4A0689009E3CA1 /* WeatherViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewProtocol.swift; sourceTree = "<group>"; };
 		8171EEFC2F4A069E009E3CA1 /* WeatherRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouterProtocol.swift; sourceTree = "<group>"; };
+		8171EF022F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PowerInternationalTyres-WeatherAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8192D77F2F48957A00878BDF /* PowerInternationalTyres-WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PowerInternationalTyres-WeatherApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8192D7822F48957A00878BDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8192D7842F48957A00878BDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +87,22 @@
 		8192D7902F48957C00878BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8171EF032F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PowerInternationalTyres-WeatherAppTests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		8171EEFF2F4A0A36009E3CA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8192D77C2F48957A00878BDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +272,7 @@
 				8192D7AC2F489B7800878BDF /* Modules */,
 				8192D7802F48957A00878BDF /* Products */,
 				8192D7AD2F489B8F00878BDF /* Resources */,
+				8171EF032F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				8192D77F2F48957A00878BDF /* PowerInternationalTyres-WeatherApp.app */,
+				8171EF022F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,6 +325,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8171EF012F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8171EF082F4A0A36009E3CA1 /* Build configuration list for PBXNativeTarget "PowerInternationalTyres-WeatherAppTests" */;
+			buildPhases = (
+				8171EEFE2F4A0A36009E3CA1 /* Sources */,
+				8171EEFF2F4A0A36009E3CA1 /* Frameworks */,
+				8171EF002F4A0A36009E3CA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8171EF072F4A0A36009E3CA1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8171EF032F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests */,
+			);
+			name = "PowerInternationalTyres-WeatherAppTests";
+			packageProductDependencies = (
+			);
+			productName = "PowerInternationalTyres-WeatherAppTests";
+			productReference = 8171EF022F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8192D77E2F48957A00878BDF /* PowerInternationalTyres-WeatherApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8192D7922F48957C00878BDF /* Build configuration list for PBXNativeTarget "PowerInternationalTyres-WeatherApp" */;
@@ -326,6 +377,10 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					8171EF012F4A0A36009E3CA1 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 8192D77E2F48957A00878BDF;
+					};
 					8192D77E2F48957A00878BDF = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -346,11 +401,19 @@
 			projectRoot = "";
 			targets = (
 				8192D77E2F48957A00878BDF /* PowerInternationalTyres-WeatherApp */,
+				8171EF012F4A0A36009E3CA1 /* PowerInternationalTyres-WeatherAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8171EF002F4A0A36009E3CA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8192D77D2F48957A00878BDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +426,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8171EEFE2F4A0A36009E3CA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8192D77B2F48957A00878BDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +471,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8171EF072F4A0A36009E3CA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8192D77E2F48957A00878BDF /* PowerInternationalTyres-WeatherApp */;
+			targetProxy = 8171EF062F4A0A36009E3CA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8192D78D2F48957C00878BDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -413,6 +491,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8171EF092F4A0A36009E3CA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M6P36UUCJC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MikhailEgorov.PowerInternationalTyres-WeatherAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerInternationalTyres-WeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PowerInternationalTyres-WeatherApp";
+			};
+			name = Debug;
+		};
+		8171EF0A2F4A0A36009E3CA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M6P36UUCJC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MikhailEgorov.PowerInternationalTyres-WeatherAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerInternationalTyres-WeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PowerInternationalTyres-WeatherApp";
+			};
+			name = Release;
+		};
 		8192D7932F48957C00878BDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -611,6 +741,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8171EF082F4A0A36009E3CA1 /* Build configuration list for PBXNativeTarget "PowerInternationalTyres-WeatherAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8171EF092F4A0A36009E3CA1 /* Debug */,
+				8171EF0A2F4A0A36009E3CA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8192D77A2F48957A00878BDF /* Build configuration list for PBXProject "PowerInternationalTyres-WeatherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
