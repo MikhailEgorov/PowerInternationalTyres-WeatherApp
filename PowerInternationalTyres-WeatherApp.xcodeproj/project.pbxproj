@@ -20,6 +20,7 @@
 		8171EEC32F49D5A0009E3CA1 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171EEC22F49D5A0009E3CA1 /* WeatherService.swift */; };
 		8171EEC52F49D75B009E3CA1 /* WeatherCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171EEC42F49D75B009E3CA1 /* WeatherCacheService.swift */; };
 		8171EEC72F49D84C009E3CA1 /* HourlyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171EEC62F49D84C009E3CA1 /* HourlyFilter.swift */; };
+		8171EECA2F49DEA0009E3CA1 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171EEC92F49DEA0009E3CA1 /* LocationService.swift */; };
 		8192D7832F48957A00878BDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D7822F48957A00878BDF /* AppDelegate.swift */; };
 		8192D7852F48957A00878BDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192D7842F48957A00878BDF /* SceneDelegate.swift */; };
 		8192D78C2F48957C00878BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8192D78B2F48957C00878BDF /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		8171EEC22F49D5A0009E3CA1 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		8171EEC42F49D75B009E3CA1 /* WeatherCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCacheService.swift; sourceTree = "<group>"; };
 		8171EEC62F49D84C009E3CA1 /* HourlyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyFilter.swift; sourceTree = "<group>"; };
+		8171EEC92F49DEA0009E3CA1 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		8192D77F2F48957A00878BDF /* PowerInternationalTyres-WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PowerInternationalTyres-WeatherApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8192D7822F48957A00878BDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8192D7842F48957A00878BDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
+		8171EEC82F49D9A0009E3CA1 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				8171EEC92F49DEA0009E3CA1 /* LocationService.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		8192D7762F48957A00878BDF = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		8192D7AA2F489B4B00878BDF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8171EEC82F49D9A0009E3CA1 /* Location */,
 				8171EEC12F49D598009E3CA1 /* Weather */,
 				8171EEAC2F49D0DB009E3CA1 /* Network */,
 				8171EEAB2F49D0CA009E3CA1 /* Repository */,
@@ -287,6 +298,7 @@
 				8192D7852F48957A00878BDF /* SceneDelegate.swift in Sources */,
 				8171EEB02F49D2F8009E3CA1 /* WeatherAssembly.swift in Sources */,
 				8171EEB62F49D367009E3CA1 /* WeatherInteractor.swift in Sources */,
+				8171EECA2F49DEA0009E3CA1 /* LocationService.swift in Sources */,
 				8171EEB82F49D376009E3CA1 /* WeatherRouter.swift in Sources */,
 				8171EEC72F49D84C009E3CA1 /* HourlyFilter.swift in Sources */,
 				8171EEC52F49D75B009E3CA1 /* WeatherCacheService.swift in Sources */,
@@ -319,6 +331,7 @@
 				DEVELOPMENT_TEAM = M6P36UUCJC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Geolocation is necessary to display personalized weather data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -355,6 +368,7 @@
 				DEVELOPMENT_TEAM = M6P36UUCJC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Geolocation is necessary to display personalized weather data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

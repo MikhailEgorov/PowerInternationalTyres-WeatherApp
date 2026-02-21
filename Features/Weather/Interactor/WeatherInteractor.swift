@@ -14,26 +14,30 @@ final class WeatherInteractor: WeatherInteractorProtocol {
     private let service: WeatherServiceProtocol
     private let mapper: WeatherMapperProtocol
     private let cache: WeatherCacheProtocol
+    private let locationService: LocationServiceProtocol
 
     init(
         service: WeatherServiceProtocol,
         mapper: WeatherMapperProtocol,
-        cache: WeatherCacheProtocol
+        cache: WeatherCacheProtocol,
+        locationService: LocationServiceProtocol
     ) {
         self.service = service
         self.mapper = mapper
         self.cache = cache
+        self.locationService = locationService
     }
 
     func fetchWeather(forceRefresh: Bool) async {
 
         do {
 
-            // пока хардкод (позже заменим LocationService)
-            let lat = 55.7558
-            let lon = 37.6176
+            let coordinate = await locationService.requestLocation()
 
-            let dto = try await service.fetchWeather(lat: lat, lon: lon)
+            let dto = try await service.fetchWeather(
+                lat: coordinate.latitude,
+                lon: coordinate.longitude
+            )
 
             try cache.save(dto)
 
