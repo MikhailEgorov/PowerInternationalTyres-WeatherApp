@@ -5,31 +5,27 @@
 //  Created by Mikhail Egorov on 21.02.2026.
 //
 
-enum NetworkError: Error {
-    case invalidURL
-    case requestFailed
-    case decodingFailed
-}
-
-protocol NetworkClientProtocol {
-    func request<T: Decodable>(_ url: URL) async throws -> T
-}
+import Foundation
 
 final class NetworkClient: NetworkClientProtocol {
 
-    func request<T: Decodable>(_ url: URL) async throws -> T {
-
-        let (data, response) = try await URLSession.shared.data(from: url)
-
-        guard let http = response as? HTTPURLResponse,
-              200..<300 ~= http.statusCode else {
-            throw NetworkError.requestFailed
-        }
-
+    func request<T: Decodable>(url: URL) async throws -> T {
         do {
-            return try JSONDecoder().decode(T.self, from: data)
+            let (data, response) = try await URLSession.shared.data(from: url)
+
+            guard let httpResponse = response as? HTTPURLResponse,
+                  200..<300 ~= httpResponse.statusCode else {
+                throw NetworkError.invalidResponse
+            }
+
+            do {
+                return try JSONDecoder().decode(T.self, from: data)
+            } catch {
+                throw NetworkError.decodingFailed(error)
+            }
+
         } catch {
-            throw NetworkError.decodingFailed
+            throw NetworkError.requestFailed(error)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  DTO.swift
+//  ForecastResponseDTO.swift
 //  PowerInternationalTyres-WeatherApp
 //
 //  Created by Mikhail Egorov on 21.02.2026.
@@ -15,7 +15,6 @@ struct ForecastResponseDTO: Decodable {
 
 struct LocationDTO: Decodable {
     let name: String
-    let localtime: String
 }
 
 struct CurrentDTO: Decodable {
@@ -36,16 +35,13 @@ struct ForecastDayDTO: Decodable {
 struct DayDTO: Decodable {
     let maxtemp_c: Double
     let mintemp_c: Double
-    let condition: ConditionDTO
 }
 
 struct HourDTO: Decodable {
     let time: String
     let temp_c: Double
-    let condition: ConditionDTO
 }
 
 struct ConditionDTO: Decodable {
     let text: String
-    let icon: String
 }
