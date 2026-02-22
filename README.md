@@ -142,6 +142,8 @@ https://api.weatherapi.com/v1/forecast.json?key=<API_KEY>&q=LAT,LON&days=3
 - Async/await для сетевых запросов и геолокации
     
 - Unit Tests с XCTest
+
+- **Deployment Target: iOS 16**
     
 
 ---
