@@ -143,26 +143,7 @@ https://api.weatherapi.com/v1/forecast.json?key=<API_KEY>&q=LAT,LON&days=3
     
 - Unit Tests с XCTest
 
-- **Deployment Target: iOS 16**
-    
-
----
-
-## 🚀 Как запустить
-
-1. Клонировать репозиторий:
-    
-
-```bash
-git clone <URL>
-```
-
-2. Открыть проект в Xcode 15+
-    
-3. Подставить API ключ в `WeatherService`
-    
-4. Собрать и запустить на симуляторе или устройстве
-    
+- Deployment Target: iOS 16
 
 ---
 
