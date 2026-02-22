@@ -54,8 +54,8 @@ final class WeatherViewController: UIViewController, WeatherViewProtocol {
     private let retryButton = UIButton(type: .system)
     
     private var currentVM: CurrentSectionViewModel?
-    private var hourlyVMs: [UUID: HourlyItemViewModel] = [:]
-    private var forecastVMs: [UUID: ForecastItemViewModel] = [:]
+    private var hourlyItems: [(UUID, HourlyItemViewModel)] = []
+    private var forecastItems: [(UUID, ForecastItemViewModel)] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -219,20 +219,28 @@ final class WeatherViewController: UIViewController, WeatherViewProtocol {
 
     // MARK: - Snapshot
     private func applySnapshot(_ viewModel: WeatherViewModel) {
-        // Сохраняем view модели
-        currentVM = viewModel.current
-        hourlyVMs = Dictionary(uniqueKeysWithValues: viewModel.hourly.map { (UUID(), $0) })
-        forecastVMs = Dictionary(uniqueKeysWithValues: viewModel.forecast.map { (UUID(), $0) })
 
-        // Создаем snapshot
+        currentVM = viewModel.current
+
+        hourlyItems = viewModel.hourly.map { (UUID(), $0) }
+        forecastItems = viewModel.forecast.map { (UUID(), $0) }
+
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections(Section.allCases)
 
         if currentVM != nil {
             snapshot.appendItems([Item(id: UUID(), section: .current)], toSection: .current)
         }
-        snapshot.appendItems(hourlyVMs.map { Item(id: $0.key, section: .hourly) }, toSection: .hourly)
-        snapshot.appendItems(forecastVMs.map { Item(id: $0.key, section: .forecast) }, toSection: .forecast)
+
+        snapshot.appendItems(
+            hourlyItems.map { Item(id: $0.0, section: .hourly) },
+            toSection: .hourly
+        )
+
+        snapshot.appendItems(
+            forecastItems.map { Item(id: $0.0, section: .forecast) },
+            toSection: .forecast
+        )
 
         dataSource.apply(snapshot, animatingDifferences: true)
         title = viewModel.locationTitle
@@ -249,19 +257,25 @@ final class WeatherViewController: UIViewController, WeatherViewProtocol {
                 switch item.section {
                 case .current:
                     guard let vm = self.currentVM else { return nil }
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CurrentCell.reuseId, for: indexPath) as! CurrentCell
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CurrentCell.reuseId, for: indexPath) as? CurrentCell else {
+                        return UICollectionViewCell()
+                    }
                     cell.configure(with: vm)
                     return cell
 
                 case .hourly:
-                    guard let vm = self.hourlyVMs[item.id] else { return nil }
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyCell.reuseId, for: indexPath) as! HourlyCell
+                    guard let vm = self.hourlyItems.first(where: { $0.0 == item.id })?.1 else { return nil }
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyCell.reuseId, for: indexPath) as? HourlyCell else {
+                        return UICollectionViewCell()
+                    }
                     cell.configure(with: vm)
                     return cell
 
                 case .forecast:
-                    guard let vm = self.forecastVMs[item.id] else { return nil }
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ForecastCell.reuseId, for: indexPath) as! ForecastCell
+                    guard let vm = self.forecastItems.first(where: { $0.0 == item.id })?.1 else { return nil }
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ForecastCell.reuseId, for: indexPath) as? ForecastCell else {
+                        return UICollectionViewCell()
+                    }
                     cell.configure(with: vm)
                     return cell
                 }

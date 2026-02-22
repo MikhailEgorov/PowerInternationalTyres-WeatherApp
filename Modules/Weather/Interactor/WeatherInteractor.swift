@@ -5,6 +5,7 @@
 //  Created by Mikhail Egorov on 21.02.2026.
 //
 import CoreLocation
+
 final class WeatherInteractor: WeatherInteractorProtocol {
 
     weak var output: WeatherInteractorOutput?
@@ -32,11 +33,11 @@ final class WeatherInteractor: WeatherInteractorProtocol {
         Task { await fetch() }
     }
 
-    // Для тестов делаем async
     func fetchWeatherForTests() async {
         await fetch()
     }
 
+    @MainActor
     private func fetch() async {
         do {
             let coordinate = await locationService.requestLocation()

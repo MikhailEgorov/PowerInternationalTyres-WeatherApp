@@ -25,22 +25,34 @@ final class LocationService: NSObject, LocationServiceProtocol {
             manager.requestLocation()
         }
     }
+
+    private func resolve(with coordinate: CLLocationCoordinate2D) {
+        guard let continuation = continuation else { return }
+        self.continuation = nil
+        manager.stopUpdatingLocation()
+        continuation.resume(returning: coordinate)
+    }
 }
 
 extension LocationService: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
+
         let coordinate = locations.first?.coordinate
-            ?? CLLocationCoordinate2D(latitude: 55.7558, longitude: 37.6176) // Москва fallback
-        continuation?.resume(returning: coordinate)
+            ?? CLLocationCoordinate2D(latitude: 55.7558, longitude: 37.6176)
+
+        resolve(with: coordinate)
     }
 
     func locationManager(_ manager: CLLocationManager,
                          didFailWithError error: Error) {
-        continuation?.resume(returning: CLLocationCoordinate2D(
+
+        let fallback = CLLocationCoordinate2D(
             latitude: 55.7558,
             longitude: 37.6176
-        ))
+        )
+
+        resolve(with: fallback)
     }
 }

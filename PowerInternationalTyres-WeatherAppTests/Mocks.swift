@@ -25,7 +25,7 @@ final class MockCache: WeatherCacheProtocol {
     var modelToReturn: WeatherDomainModel?
 
     func save(_ model: WeatherDomainModel) {
-        // ничего не делаем
+        
     }
 
     func load() -> WeatherDomainModel? {
@@ -35,7 +35,6 @@ final class MockCache: WeatherCacheProtocol {
 
 final class MockLocationService: LocationServiceProtocol {
     func requestLocation() async -> CLLocationCoordinate2D {
-        // Возвращаем Москву
         CLLocationCoordinate2D(latitude: 55.75, longitude: 37.61)
     }
 }

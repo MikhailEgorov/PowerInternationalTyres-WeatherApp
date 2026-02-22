@@ -8,7 +8,6 @@
 import UIKit
 
 final class HourlyCell: UICollectionViewCell {
-
     static let reuseId = "HourlyCell"
 
     private let timeLabel = UILabel()
@@ -19,31 +18,26 @@ final class HourlyCell: UICollectionViewCell {
         super.init(frame: frame)
         configure()
     }
-
     required init?(coder: NSCoder) { fatalError() }
 
     private func configure() {
-
         backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 12
 
-        timeLabel.font = .systemFont(ofSize: 14)
-        timeLabel.textColor = .secondaryLabel
+        timeLabel.font = .systemFont(ofSize: 14, weight: .medium)
+        timeLabel.textColor = .label
         timeLabel.textAlignment = .center
+        timeLabel.lineBreakMode = .byTruncatingTail
 
-        tempLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        tempLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         tempLabel.textAlignment = .center
+        tempLabel.textColor = .label
 
         iconImageView.contentMode = .scaleAspectFit
 
-        let stack = UIStackView(arrangedSubviews: [
-            timeLabel,
-            iconImageView,
-            tempLabel
-        ])
-
+        let stack = UIStackView(arrangedSubviews: [timeLabel, iconImageView, tempLabel])
         stack.axis = .vertical
-        stack.spacing = 6
+        stack.spacing = 4
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false
 
@@ -54,7 +48,7 @@ final class HourlyCell: UICollectionViewCell {
             stack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             stack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            iconImageView.heightAnchor.constraint(equalToConstant: 30)
+            iconImageView.heightAnchor.constraint(equalToConstant: 28)
         ])
     }
 

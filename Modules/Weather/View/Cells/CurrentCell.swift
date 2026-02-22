@@ -8,7 +8,6 @@
 import UIKit
 
 final class CurrentCell: UICollectionViewCell {
-
     static let reuseId = "CurrentCell"
 
     private let temperatureLabel = UILabel()
@@ -19,28 +18,24 @@ final class CurrentCell: UICollectionViewCell {
         super.init(frame: frame)
         configure()
     }
-
     required init?(coder: NSCoder) { fatalError() }
 
     private func configure() {
-
         backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 16
 
         temperatureLabel.font = .systemFont(ofSize: 48, weight: .bold)
         temperatureLabel.textColor = .label
+        temperatureLabel.textAlignment = .center
 
         conditionLabel.font = .systemFont(ofSize: 17)
         conditionLabel.textColor = .secondaryLabel
+        conditionLabel.textAlignment = .center
+        conditionLabel.lineBreakMode = .byTruncatingTail
 
         iconImageView.contentMode = .scaleAspectFit
 
-        let stack = UIStackView(arrangedSubviews: [
-            temperatureLabel,
-            conditionLabel,
-            iconImageView
-        ])
-
+        let stack = UIStackView(arrangedSubviews: [temperatureLabel, conditionLabel, iconImageView])
         stack.axis = .vertical
         stack.spacing = 8
         stack.alignment = .center

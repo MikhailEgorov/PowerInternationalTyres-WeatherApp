@@ -123,7 +123,6 @@
 				8171EE982F49D094009E3CA1 /* Router */,
 				8171EEE22F4A03BD009E3CA1 /* Entity */,
 				8171EEE32F4A03C6009E3CA1 /* Data */,
-				8171EEE42F4A03DF009E3CA1 /* Utils */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -229,13 +228,6 @@
 				8171EEE52F4A0433009E3CA1 /* DTO */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		8171EEE42F4A03DF009E3CA1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		8171EEE52F4A0433009E3CA1 /* DTO */ = {

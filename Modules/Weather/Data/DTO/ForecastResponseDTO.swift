@@ -15,6 +15,7 @@ struct ForecastResponseDTO: Decodable {
 
 struct LocationDTO: Decodable {
     let name: String
+    let tz_id: String
 }
 
 struct CurrentDTO: Decodable {
